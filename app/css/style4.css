@@ -227,4 +227,8 @@ body {
   gap: 10px;
   border-top: 1px solid #dcdcdc;
   padding-top: 10px;
+  transition: color 0.2s ease-out;
+}
+.slider-block__item-link:hover {
+  color: #e70000;
 }
