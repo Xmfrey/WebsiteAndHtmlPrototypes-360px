@@ -1,0 +1,562 @@
+@font-face {
+  font-family: "Neuzeit Grotesk";
+  src: url("../fonts/NeuzeitGro-Bol.ttf") format("ttf");
+  src: url("../fonts/NeuzeitGro-Bol.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.ttf") format("ttf");
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neuzeit Grotesk";
+  src: url("../fonts/NeuzeitGroCon-Bla.ttf") format("ttf");
+  src: url("../fonts/NeuzeitGroCon-Bla.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.ttf") format("ttf");
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.ttf") format("ttf");
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neuzeit Grotesk Extra";
+  src: url("../fonts/NeuzeitGroExt-Bla.ttf") format("ttf");
+  src: url("../fonts/NeuzeitGroExt-Bla.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+/* /////////////////global//////////////////// */
+
+html,
+body {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: rgba(40, 40, 40, 0.8);
+}
+
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+  min-width: 280px;
+}
+
+.button {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 14px 25px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  border-radius: 40px;
+  cursor: pointer;
+  background: #282828;
+}
+
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.container {
+  width: 390px;
+  padding: 24px 10px 46px;
+  background-color: #fff;
+}
+
+/* ////////////////header//////////////// */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #0b0b0b;
+  font-size: 12px;
+  line-height: 130%;
+  margin-bottom: 24px;
+}
+.header__logo-link {
+  display: block;
+}
+
+/* ////////////////slider//////////////// */
+
+.page__slider {
+  margin-bottom: 24px;
+}
+.slider__mySwiper {
+  position: relative;
+  user-select: none;
+}
+.slider__mySwiper .swiper-wrapper {
+  will-change: transform;
+}
+.slider-item__mainImage-wrapper {
+  border-radius: 30px;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 8px;
+}
+.slider-item__images {
+  display: flex;
+  gap: 10px;
+}
+.slider-item__image-wrapper {
+  width: 116px;
+}
+.slider-item__image-wrapper:first-child {
+  border-radius: 30px;
+  border: 1px solid #dcdcdc;
+}
+.slider__arrow-left,
+.slider__arrow-right {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  z-index: 10;
+}
+.slider__arrow-left {
+  padding: 2px 2px 2px 6px;
+}
+.slider__arrow-right {
+  padding: 2px 6px 2px 2px;
+  right: 0;
+}
+.slider__arrow-left:hover svg path,
+.slider__arrow-right:hover svg path {
+  stroke: rgba(40, 40, 40, 0.4);
+}
+
+/* ////////////////buy-content//////////////// */
+
+.page__buy-content {
+  margin-bottom: 24px;
+}
+.buy-content__title {
+  margin-bottom: 20px;
+}
+.title-block__main-title {
+  color: #282828;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 110%;
+}
+.title-block__post-title {
+  font-weight: 500;
+  line-height: 130%;
+}
+.buy-content__price-block {
+  margin-bottom: 12px;
+}
+.price-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.price-block__prev-price {
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  text-decoration: line-through;
+  text-transform: capitalize;
+}
+.price-block__real-price {
+  color: #282828;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+}
+.price-block__discount {
+  color: #fff;
+  text-align: center;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 40px;
+  background: linear-gradient(
+    106deg,
+    #69b1c9 11.42%,
+    #6081c3 53.89%,
+    #5558af 95.29%
+  );
+}
+.buy-content__colors-select {
+  margin-bottom: 12px;
+}
+.colors-select__title {
+  color: #282828;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.colors-select__colors-items {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.colors-select__colors-item {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.colors-select__colors-item:first-child {
+  background: #adacb1;
+}
+.colors-select__colors-item:nth-child(2) {
+  background: #282828;
+}
+.colors-select__colors-item:nth-child(3) {
+  background: #ecaaa7;
+}
+.colors-select__colors-item:last-child {
+  background: #ece5dd;
+}
+
+.colors-select__colors-item.swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #626262;
+}
+
+.buy-content__button {
+  margin-bottom: 15px;
+  width: 100%;
+  font-family: "Neuzeit Grotesk Extra", sans-serif;
+}
+.buy-content__button:hover {
+  background-color: #a34848;
+}
+
+.buy-content__timer {
+  color: #f65d81;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.buy-content__timer-reminder {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 130%;
+}
+.buy-content__timer-clock {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 110%;
+}
+.buy-content__timer-clock span {
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 700;
+  padding: 5px;
+}
+.buy-content__payments {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-content__payments-iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f7f7f7;
+}
+
+/* ////////////////specification//////////////// */
+
+.page__specification {
+  margin-bottom: 24px;
+}
+.specification__body {
+  padding: 15px;
+  border-radius: 30px;
+  background: #f7f7f7;
+}
+.advantages__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.advantages__item-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #282828;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.advantages__item-icon {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #282828;
+}
+.advantages__item-description {
+  line-height: 130%;
+}
+
+.specification__divide-line {
+  height: 1px;
+  background: #dcdcdc;
+  margin: 16px 0;
+}
+.characteristics__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.characteristics__item-name {
+  display: inline-block;
+  color: #282828;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.characteristics__item-fields {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.characteristics__item-fields:not(:last-child) {
+  margin-bottom: 8px;
+}
+.characteristics__item-field {
+  flex-basis: 50%;
+  color: #282828;
+  font-weight: 500;
+  line-height: 130%;
+}
+.characteristics__item-value {
+  flex-basis: 50%;
+  line-height: 130%;
+}
+
+/* ////////////////shipping//////////////// */
+
+.shipping__item {
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid #626262;
+  backdrop-filter: blur(7.5px);
+  height: 60px;
+  overflow: hidden;
+  user-select: none;
+}
+.shipping__item.active {
+  height: auto;
+}
+.shipping__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.shipping__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.shipping__item-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #282828;
+  font-family: "Neuzeit Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.shipping__item-cross {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #626262;
+  background: #282828;
+  cursor: pointer;
+  z-index: 5;
+}
+.shipping__item-cross::before,
+.shipping__item-cross::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 13px;
+  width: 16px;
+  height: 2px;
+  background-color: #fff;
+  transition: transform 0.2s ease-out;
+}
+
+.shipping__item-cross::before {
+  transform: rotate(90deg);
+}
+
+.shipping__item-cross.active::before {
+  transform: rotate(0deg);
+}
+
+.shipping__item-description {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out;
+  line-height: 130%;
+}
+
+.shipping__item.active > .shipping__item-description {
+  opacity: 1;
+  visibility: visible;
+}
