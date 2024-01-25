@@ -501,7 +501,6 @@ body {
   backdrop-filter: blur(7.5px);
   height: 60px;
   overflow: hidden;
-  user-select: none;
 }
 .shipping__item.active {
   height: auto;
