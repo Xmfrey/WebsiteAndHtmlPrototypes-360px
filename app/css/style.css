@@ -42,7 +42,6 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
-  color: inherit;
 }
 
 a:hover {
@@ -203,11 +202,9 @@ body {
   gap: 16px;
   padding: 15px 10px;
 }
-
 .pre-header__discount-button:hover {
   background-color: #aba0e1;
 }
-
 .header {
   display: flex;
   align-items: center;
@@ -220,21 +217,19 @@ body {
   height: 26px;
 }
 .nav__link {
+  color: rgba(255, 255, 255, 0.8);
   transition: color 0.2s ease-out;
 }
 .nav__link:hover {
   color: #fff;
 }
-
 .nav__list {
   font-family: "Roboto", sans-serif;
-  color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
   font-weight: 400;
   display: flex;
   justify-content: space-between;
 }
-
 .nav__item:not(:last-child) {
   margin-right: 25px;
 }
@@ -252,7 +247,6 @@ body {
   border-radius: 0px 0px 120px 120px;
   border-bottom: 3px solid #928dab;
 }
-
 .main-block::before {
   content: "";
   position: absolute;
@@ -262,7 +256,6 @@ body {
   box-shadow: 0px 0px 25px 15px rgba(0, 0, 0, 0.9);
   z-index: 1;
 }
-
 .main-block__wrapper {
   padding: 20px 10px;
 }

@@ -59,7 +59,6 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
-  color: inherit;
 }
 
 a:hover {
@@ -512,11 +511,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .shipping__item.active .shipping__item-header {
   margin-bottom: 20px;
 }
-
 .shipping__item-title {
   display: inline-flex;
   align-items: center;
@@ -548,22 +545,18 @@ body {
   background-color: #fff;
   transition: transform 0.2s ease-out;
 }
-
 .shipping__item-cross::before {
   transform: rotate(90deg);
 }
-
 .shipping__item-cross.active::before {
   transform: rotate(0deg);
 }
-
 .shipping__item-description {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-out;
   line-height: 130%;
 }
-
 .shipping__item.active > .shipping__item-description {
   opacity: 1;
   visibility: visible;
