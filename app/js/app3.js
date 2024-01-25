@@ -2,10 +2,24 @@ const crosses = document.querySelectorAll(".shipping__item-cross");
 const spoilers = document.querySelectorAll(".shipping__item");
 const colors = document.querySelectorAll(".colors-select__colors-item");
 
+spoilers.forEach((item) => {
+  if (item.classList.contains("active")) {
+    item.style.maxHeight = item.scrollHeight + "px";
+  } else {
+    item.style.maxHeight = 60 + "px";
+  }
+});
+
 crosses.forEach((cross, index) => {
   cross.addEventListener("click", () => {
     cross.classList.toggle("active");
-    spoilers[index].classList.toggle("active");
+    if (spoilers[index].classList.contains("active")) {
+      spoilers[index].classList.remove("active");
+      spoilers[index].style.maxHeight = 60 + "px";
+    } else {
+      spoilers[index].classList.add("active");
+      spoilers[index].style.maxHeight = spoilers[index].scrollHeight + "px";
+    }
   });
 });
 
