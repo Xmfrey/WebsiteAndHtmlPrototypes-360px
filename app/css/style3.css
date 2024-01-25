@@ -253,9 +253,15 @@ body {
   padding: 2px 6px 2px 2px;
   right: 0;
 }
-.slider__arrow-left:hover svg path,
-.slider__arrow-right:hover svg path {
-  stroke: rgba(40, 40, 40, 0.4);
+
+.slider__arrow-left svg *,
+.slider__arrow-right svg * {
+  transition: stroke 0.2s ease-in-out;
+}
+
+.slider__arrow-left:hover svg *,
+.slider__arrow-right:hover svg * {
+  stroke: rgba(40, 40, 40, 0.5);
 }
 
 /* ////////////////buy-content//////////////// */
