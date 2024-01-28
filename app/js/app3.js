@@ -1,6 +1,65 @@
 const crosses = document.querySelectorAll(".shipping__item-cross");
 const spoilers = document.querySelectorAll(".shipping__item");
-const colors = document.querySelectorAll(".colors-select__colors-item");
+const colorsPagination = document.querySelectorAll(
+  ".colors-select__colors-item"
+);
+const sliderItems = document.querySelectorAll(".slider-item");
+const sliders = [];
+sliderItems.forEach((item) => {
+  sliders.push(item.querySelector(".swiper"));
+});
+
+sliders.forEach((s, i) => {
+  let itemPagination = s.querySelectorAll(
+    ".slider-item__pagination-imageWrapper"
+  );
+  new Swiper(`.slider-item__mySwiper-${i + 1}`, {
+    speed: 500,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 1,
+    pagination: {
+      el: s.querySelector(".slider-item__pagination"),
+      bulletClass: "slider-item__pagination-imageWrapper",
+      bulletActiveClass: "slider-item__pagination--active",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return (
+          '<span class="' +
+          className +
+          '">' +
+          itemPagination[index].innerHTML +
+          "</span>"
+        );
+      },
+    },
+    navigation: {
+      nextEl: s.querySelector(".slider__arrow-right"),
+      prevEl: s.querySelector(".slider__arrow-left"),
+    },
+  });
+});
+
+const mainSwiper = new Swiper(".slider__mySwiper", {
+  allowTouchMove: false,
+  speed: 500,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    el: ".colors-select__colors-items",
+    bulletClass: "colors-select__colors-item",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return (
+        '<span class="' +
+        className +
+        '">' +
+        colorsPagination[index].innerHTML +
+        "</span>"
+      );
+    },
+  },
+});
 
 spoilers.forEach((item) => {
   if (item.classList.contains("active")) {
@@ -21,28 +80,4 @@ crosses.forEach((cross, index) => {
       spoilers[index].style.maxHeight = spoilers[index].scrollHeight + "px";
     }
   });
-});
-
-const swiper = new Swiper(".swiper", {
-  speed: 400,
-  slidesPerView: 1,
-  loop: true,
-  navigation: {
-    nextEl: ".slider__arrow-right",
-    prevEl: ".slider__arrow-left",
-  },
-  pagination: {
-    el: ".colors-select__colors-items",
-    bulletClass: `colors-select__colors-item`,
-    clickable: true,
-    renderBullet: function (index, className) {
-      return (
-        '<span class="' + className + '">' + colors[index].innerHTML + "</span>"
-      );
-    },
-  },
-  autoplay: {
-    delay: 10000,
-    disableOnInteraction: false,
-  },
 });
