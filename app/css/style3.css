@@ -514,7 +514,6 @@ body {
   padding: 15px;
   border-radius: 30px;
   border: 1px solid #626262;
-  backdrop-filter: blur(7.5px);
   transition: max-height 0.3s ease;
   overflow: hidden;
 }
