@@ -71,13 +71,22 @@ spoilers.forEach((item) => {
 
 crosses.forEach((cross, index) => {
   cross.addEventListener("click", () => {
-    cross.classList.toggle("active");
-    if (spoilers[index].classList.contains("active")) {
-      spoilers[index].classList.remove("active");
-      spoilers[index].style.maxHeight = 60 + "px";
-    } else {
-      spoilers[index].classList.add("active");
-      spoilers[index].style.maxHeight = spoilers[index].scrollHeight + "px";
+    spoilerAction(cross, index);
+  });
+  cross.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      spoilerAction(cross, index);
     }
   });
 });
+
+function spoilerAction(cross, index) {
+  cross.classList.toggle("active");
+  if (spoilers[index].classList.contains("active")) {
+    spoilers[index].classList.remove("active");
+    spoilers[index].style.maxHeight = 60 + "px";
+  } else {
+    spoilers[index].classList.add("active");
+    spoilers[index].style.maxHeight = spoilers[index].scrollHeight + "px";
+  }
+}
