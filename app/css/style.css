@@ -177,14 +177,11 @@ body {
   color: #d8d4ec;
 }
 
-.position {
-  display: flex;
-  justify-content: center;
-}
-
 .container {
-  width: 390px;
+  max-width: 390px;
+  margin: 0 auto;
   background: #111018;
+  padding-bottom: 30px;
 }
 
 /* ////////////////header//////////////// */
@@ -241,9 +238,6 @@ body {
 }
 .main-block {
   position: relative;
-  margin-bottom: 31px;
-  background-blend-mode: soft-light, normal;
-  backdrop-filter: blur(15px);
   border-radius: 0px 0px 120px 120px;
   border-bottom: 3px solid #928dab;
 }

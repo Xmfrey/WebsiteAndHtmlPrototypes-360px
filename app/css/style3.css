@@ -180,16 +180,11 @@ body {
   background: #282828;
 }
 
-.position {
-  display: flex;
-  justify-content: center;
-}
-
 .container {
-  width: 390px;
+  max-width: 390px;
+  margin: 0 auto;
   padding: 24px 10px 46px;
   background-color: #fff;
-  overflow-x: hidden;
 }
 
 /* ////////////////header//////////////// */
