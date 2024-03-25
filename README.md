@@ -1,1 +1,1 @@
-Open by https://xmfrey.github.io/WebsiteBeatsStudioBuds-390px/.
+Open by https://xmfrey.github.io/ProductCardBeatsStudioBuds-390px/.
